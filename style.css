@@ -1,12 +1,65 @@
 * {
     margin: 0;
     padding: 0;
-    background-color:aquamarine;
+    /* background-color:aquamarine; */
 }
 
 .center {
     text-align: center;
 }
+
+
+.cover-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.cover-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 80%; /* Adjust the width of the overlay text */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .overlay-text {
+    width: 90%; /* Adjust for smaller screens */
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 
 .item1 { grid-area: header; }
 .item2 { grid-area: menu; }
@@ -32,7 +85,7 @@
     font-size: 30px;
 }  */
 
-.grid-container {
+/* .grid-container {
     display: grid;
     grid-template-columns: auto auto;
     background-color: aqua;
@@ -45,7 +98,7 @@
     padding: 20px;
     font-size: 30px;
     text-align: center;
-}
+} */
 
 /* .grid-container {
     display: inline-grid;
@@ -170,3 +223,60 @@
   .active:after {
     content: '\2796'; 
   } */
+
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .footer-section a:hover {
+    color: #ff9900;
+  }
+
+  li {
+    list-style-type: none;
+    position: relative;    /* It's needed for setting position to absolute in the next rule. */
+}
+
+li::before {
+    content:'■';
+    position: absolute;
+    left: -0.8em;          /* Adjust this value so that it appears where you want. */
+    font-size: 3em; 
+    margin-bottom: 20px;     /* Adjust this value so that it appears what size you want. */
+}
