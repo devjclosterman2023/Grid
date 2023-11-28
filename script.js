@@ -157,3 +157,15 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+//Code to convert your images 
+const sharp = require('sharp');
+const fs = require('fs');
+const directory = './images';
+
+fs.readdirSync(directory).forEach(file => {
+  sharp(`${directory}/${file}`)
+    .resize(200, 100) // width, height
+    .toFile(`${directory}/${file}-small.jpg`);
+  });
