@@ -1518,7 +1518,9 @@ a {
     gap: 30px;
     margin-bottom: 30px;
   }
-
+.hs-form-iframe-0 {
+  color: white !important;
+}
   .form-input { padding: 15px 20px; }
 
   textarea.form-input { margin-bottom: 30px; }
