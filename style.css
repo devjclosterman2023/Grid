@@ -1501,7 +1501,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .blog-content { padding: 25px; }
 
-
+a {
+  color: white;
+}
 
   /**
    * #CONTACT
